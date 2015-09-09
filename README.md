@@ -51,7 +51,7 @@ var ccAPIQuery = ccSource + ccSubjCode + ccCourseCode;
 
 Any of the data available in the Course Catalog is also available in the JSON values returned. What elements are available should be self-evident, but here is a brief explanation of what is presented.
 
-1. Top Level Course Data
+#### 1. Top Level Course Data
 
 There is information that is universal to all courses of this title across all sections. This is where the 'course level data' comes into play.
 
@@ -63,7 +63,7 @@ $.getJSON('https://courses.newschool.edu/api/PLFS4017', function(data) {
 });
 ```
 
-2. Section Level Data
+#### 2. Section Level Data
 
 Most relevant data exists at the section level. A section is just one instance of the course. You will need to loop (each/for) through the sections in order to make sure you're returning all of the results.
 
@@ -77,7 +77,7 @@ $.getJSON('https://courses.newschool.edu/api/PLFS4017', function(data) {
 });
 ```
 
-3. Sub-Section Level Data
+#### 3. Sub-Section Level Data
 
 Sometimes there are multple occurrences of a course at the section level (multiple class times, etc.) so there is a sub-section level of data. Using JSON dot notation, you can access this fairly easily in a loop (each/for) to ensure you are getting the full scope of data. 
 
